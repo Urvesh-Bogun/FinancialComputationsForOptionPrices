@@ -8,7 +8,7 @@ sigma = 0.48
 r = 0.07
 T = 0.5
 timeStep = 182
-numberOfSimulations = 1000
+numberOfSimulations = 50000
 
 def calculateDt(T, timeStep):
     return T / timeStep
