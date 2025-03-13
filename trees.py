@@ -18,7 +18,7 @@ def calculateD(u):
     return 1 / u
 
 def buildStockPriceTree(S0, u, d, N):
-    stockPriceTree = [[0 for _ in range(N)] for _ in range(N)]
+    stockPriceTree = [[0 for j in range(N)] for i in range(N)]
     stockPriceTree[0][0] = S0
 
     for i in range(1, N):
