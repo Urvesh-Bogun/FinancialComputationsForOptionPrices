@@ -19,7 +19,7 @@ def calculateDiscountFactor(r, T):
 def randomNormal():
     return norm.rvs()
 
-def simululatePath(S0, sigma, r, T, timeStep):
+def simulatePath(S0, sigma, r, T, timeStep):
     dt = calculateDt(T, timeStep)
     lnS = math.log(S0)
 
@@ -36,7 +36,7 @@ def calculatePayoff(S, X, isCall):
         return max(X - S, 0)
     
 def createSample(S0, X, sigma, r, T, timeStep, isCall):
-    S = simululatePath(S0, sigma, r, T, timeStep)
+    S = simulatePath(S0, sigma, r, T, timeStep)
     payoff = calculatePayoff(S, X, isCall)
     return payoff
 

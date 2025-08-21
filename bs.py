@@ -29,9 +29,9 @@ def calculateOptionPrice(S0, X, sigma, r, T, isCall):
     else:
         return calculatePutOptionPrice(S0, X, r, T, d1, d2)
 
+if __name__ == "__main__":
+    print(f"Call (X = 120): { calculateOptionPrice(S0, X1, sigma, r, T, isCall = True) } ")
+    print(f"Put (X = 120): { calculateOptionPrice(S0, X1, sigma, r, T, isCall = False) } ")
 
-print(f"Call (X = 120): { calculateOptionPrice(S0, X1, sigma, r, T, isCall = True) } ")
-print(f"Put (X = 120): { calculateOptionPrice(S0, X1, sigma, r, T, isCall = False) } ")
-
-print(f"Call (X = 88): { calculateOptionPrice(S0, X2, sigma, r, T, isCall = True) } ")
-print(f"Put (X = 88): { calculateOptionPrice(S0, X2, sigma, r, T, isCall = False) } ")
+    print(f"Call (X = 88): { calculateOptionPrice(S0, X2, sigma, r, T, isCall = True) } ")
+    print(f"Put (X = 88): { calculateOptionPrice(S0, X2, sigma, r, T, isCall = False) } ")
